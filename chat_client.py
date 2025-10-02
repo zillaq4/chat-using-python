@@ -5,7 +5,7 @@ import threading
 nickname = input("Choose your nickname: ")
 
 client = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client.connect(('192.168.56.1 ', 12345))  #change IP if server is remote
+client.connect(('127.0.0.1 ', 12345))  #change IP if server is remote
 
 
 def receive():
@@ -31,5 +31,6 @@ receive_thread.start()
 
 write_thread = threading.Thread(target=write)
 write_thread.start()
+
 
 
